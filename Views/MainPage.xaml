@@ -1,0 +1,113 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UBBnewsApp.MainPage">
+
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <SearchBar x:Name="searchBar"
+                           Text="{Binding Search}"
+                           SearchCommand="{Binding SearchCommand}"
+                           SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"
+                           Placeholder="Search posts..."/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                    <Button Text="Ogólne" Command="{Binding FilterPostsCommand}" CommandParameter="Ogólne"/>
+                    <Button Text="AZS" Command="{Binding FilterPostsCommand}" CommandParameter="AZS"/>
+                    <Button Text="WBMII" Command="{Binding FilterPostsCommand}" CommandParameter="WBMiI"/>
+                    <Button Text="WH-S" Command="{Binding FilterPostsCommand}" CommandParameter="WH-S"/>
+                    <Button Text="WNoZ" Command="{Binding FilterPostsCommand}" CommandParameter="WNoZ"/>
+                    <Button Text="chór" Command="{Binding FilterPostsCommand}" CommandParameter="chór"/>
+                    <Button Text="Clear" Command="{Binding FilterPostsCommand}" CommandParameter="Clear"/>
+                </StackLayout>
+
+                <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"/>
+
+                <CollectionView ItemsSource="{Binding Posts}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical" Padding="10">
+
+                                <!-- Grid to control overlay layout -->
+                                <Grid WidthRequest="575" HeightRequest="345">
+                                    <!-- Adjust height as needed -->
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <!-- Image area -->
+                                        <RowDefinition Height="Auto" />
+                                        <!-- Label area -->
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Image element -->
+                                    <Image 
+                                        Source="{Binding ImageUrl}"
+                                        Aspect="AspectFill"
+                                        Grid.RowSpan="2" 
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Command="{Binding BindingContext.OpenUrlCommand, 
+                                                          Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                CommandParameter="{Binding Url}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Label 
+                                        Text="{Binding Category}" 
+                                        FontSize="Small" 
+                                        TextColor="White"
+                                        BackgroundColor="#80000000" 
+                                        Padding="5"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Start"
+                                        Grid.Row="0"
+                                        />
+
+                                        <!-- Grid for the gradient background and title label -->
+                                        <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                                            <Grid.Background>
+                                                <LinearGradientBrush EndPoint="0,1">
+                                                    <GradientStop Color="Transparent" Offset="0.0" />
+                                                    <GradientStop Color="Blue" Offset="1.0" />
+                                                </LinearGradientBrush>
+                                            </Grid.Background>
+
+                             
+                                            <Label
+                                            Text="{Binding Title}" 
+                                            FontSize="Medium"
+                                            TextColor="White"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            Padding="10, 20"
+                                                LineBreakMode="WordWrap">
+
+                                                <Label.GestureRecognizers>
+                                                    <TapGestureRecognizer 
+                                                    Command="{Binding BindingContext.OpenUrlCommand, 
+                                                              Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                    CommandParameter="{Binding Url}"/>
+                                                </Label.GestureRecognizers>
+                                            </Label>
+                                        </Grid>
+                                </Grid>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                    <Button Text="Previous" Command="{Binding PreviousPageCommand}" IsVisible="{Binding IsPreviousPageVisible}" />
+                    <Button Text="Next" Command="{Binding NextPageCommand}" IsVisible="{Binding IsNextPageVisible}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
