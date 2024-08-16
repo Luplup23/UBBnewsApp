@@ -9,6 +9,9 @@
     <Color x:Key="Primary">#6178cc</Color>
     <Color x:Key="PrimaryDark">#6178cc</Color>
     <Color x:Key="PrimaryDarkText">#242424</Color>
+    <Color x:Key="GradientBlue">#17376E</Color>
+    <Color x:Key="BackgroundBlue"></Color>
+    <Color x:Key="BackgroundGrey"></Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
     <Color x:Key="SecondaryDarkText">#d9dcf1</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>

@@ -4,12 +4,82 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+
+    <LinearGradientBrush x:Key="GridBackgroundBrush" EndPoint="0,1">
+        <GradientStop Color="Transparent" Offset="0.0" />
+        <GradientStop Color="{StaticResource GradientBlue}" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <Style x:Key="GridStackLayout" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Vertical" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+    
+    <Style x:Key="MainGrid" TargetType="Grid">
+        <Setter Property="MaximumWidthRequest" Value="575" />
+        <Setter Property="MaximumHeightRequest" Value="345" />
+    </Style>
+    
+    <Style x:Key="HeaderImage" TargetType="Image">
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+    
+    <Style TargetType="Label" x:Key="TitleLabel">
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="TextColor" Value="{StaticResource White}"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="10, 20"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+    </Style>
+    <Style x:Key="PaginationStackLayout" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+    <Style x:Key="CategoryLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="Padding" Value="5" />
+    </Style>
+    <Style x:Key="CategoryFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="BackgroundColor" Value="#80000000" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="Margin" Value="5" />
+        <Style.Triggers>
+            <DataTrigger TargetType="Frame" Binding="{Binding Source={RelativeSource AncestorType={x:Type Frame}}, Path=Content.Children[0].Text}" Value="Important">
+                <Setter Property="BackgroundColor" Value="Red" />
+                <Setter Property="BorderColor" Value="DarkRed" />
+            </DataTrigger>
+            <DataTrigger TargetType="Frame" Binding="{Binding Source={RelativeSource AncestorType={x:Type Frame}}, Path=Content.Children[0].Text}" Value="Warning">
+                <Setter Property="BackgroundColor" Value="Yellow" />
+                <Setter Property="BorderColor" Value="DarkOrange" />
+            </DataTrigger>
+            <DataTrigger TargetType="Frame" Binding="{Binding Source={RelativeSource AncestorType={x:Type Frame}}, Path=Content.Children[0].Text}" Value="Info">
+                <Setter Property="BackgroundColor" Value="LightBlue" />
+                <Setter Property="BorderColor" Value="DarkBlue" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style TargetType="Grid" x:Key="StyledGrid">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="End" />
+        <Setter Property="Background" Value="{StaticResource GridBackgroundBrush}" />
+    </Style>
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
     </Style>
-
+    
     <Style TargetType="IndicatorView">
         <Setter Property="IndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}"/>
         <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}"/>

@@ -7,10 +7,9 @@
         <ScrollView>
             <StackLayout>
                 <SearchBar
-                    x:Name="searchBar"
+                    x:Name="SearchBar"
                     SearchCommand="{Binding SearchCommand}"
-                    SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"
-                    Placeholder="Search posts..."
+                    SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
                 />
 
                 <StackLayout
@@ -64,12 +63,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout
-                                Orientation="Vertical"
-                                Padding="10"
-                            >
+                            Style="{StaticResource GridStackLayout}"
+                                >
                                 <Grid
-                                    MaximumWidthRequest="575"
-                                    MaximumHeightRequest="345"
+                                    Style="{StaticResource MainGrid}"
                                 >
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
@@ -81,10 +78,7 @@
 
                                     <Image
                                         Source="{Binding ImageUrl}"
-                                        Aspect="AspectFill"
-                                        Grid.RowSpan="2"
-                                        VerticalOptions="FillAndExpand"
-                                        HorizontalOptions="FillAndExpand"
+                                        Style="{StaticResource HeaderImage}"
                                     >
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
@@ -96,52 +90,19 @@
                                     </Image>
 
                                     <Frame
-                                        CornerRadius="5"
-                                        Padding="0"
-                                        HasShadow="False"
-                                        BackgroundColor="#80000000"
-                                        HorizontalOptions="End"
-                                        VerticalOptions="Start"
-                                        Grid.Row="0"
-                                        Margin="5"
+                                        Style="{StaticResource CategoryFrame}"
                                     >
                                         <Label
                                             Text="{Binding Category}"
-                                            FontSize="Small"
-                                            TextColor="White"
-                                            Padding="5"
+                                            Style="{StaticResource CategoryLabel}"
                                         />
                                     </Frame>
-                                    <Grid
-                                        Grid.Row="1"
-                                        HorizontalOptions="FillAndExpand"
-                                        VerticalOptions="End"
-                                    >
-                                        <Grid.Background>
-                                            <LinearGradientBrush EndPoint="0,1">
-                                                <GradientStop
-                                                    Color="Transparent"
-                                                    Offset="0.0"
-                                                />
-                                                <GradientStop
-                                                    Color="#17376E"
-                                                    Offset="1.0"
-                                                />
-                                            </LinearGradientBrush>
-                                        </Grid.Background>
-
+                                    <Grid Style="{StaticResource StyledGrid}" Grid.Row="1">
                                         <Label
                                             Text="{Binding Title}"
-                                            FontSize="Medium"
-                                            TextColor="White"
-                                            HorizontalTextAlignment="Start"
-                                            VerticalTextAlignment="Center"
-                                            HorizontalOptions="FillAndExpand"
-                                            VerticalOptions="FillAndExpand"
-                                            Padding="10, 20"
-                                            LineBreakMode="WordWrap"
-                                        >
-                                            <Label.GestureRecognizers>
+                                            Style="{StaticResource TitleLabel}">
+
+                                        <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
                                                     Command="{Binding BindingContext.OpenUrlCommand, 
                                                               Source={RelativeSource AncestorType={x:Type ContentPage}}}"
@@ -157,10 +118,8 @@
                 </CollectionView>
 
                 <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="CenterAndExpand"
-                    Padding="10"
-                >
+                Style="{StaticResource PaginationStackLayout}"
+                    >
                     <Button
                         Text="Previous"
                         Command="{Binding PreviousPageCommand}"
