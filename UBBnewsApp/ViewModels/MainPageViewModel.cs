@@ -12,7 +12,8 @@ namespace UBBnewsApp.ViewModels
         private ObservableCollection<Post> _allPosts;
         private ObservableCollection<Post> _filteredPosts;
 
-        private const int PostsPerPage = 10;
+        private
+        const int PostsPerPage = 10;
         private int _currentPage;
 
         public ICommand SearchCommand
@@ -35,7 +36,6 @@ namespace UBBnewsApp.ViewModels
         {
             get;
         }
-
 
         private bool _isPreviousPageVisible;
         public bool IsPreviousPageVisible

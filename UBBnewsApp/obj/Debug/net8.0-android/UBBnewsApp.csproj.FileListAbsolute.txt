@@ -1096,3 +1096,4 @@ C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\ne
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-android\lp\153\jl\files.cache
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-android\lp\160\jl\files.cache
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-android\android\assets\SkiaSharp.dll
+C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-android\UBBnewsApp.sourcelink.json

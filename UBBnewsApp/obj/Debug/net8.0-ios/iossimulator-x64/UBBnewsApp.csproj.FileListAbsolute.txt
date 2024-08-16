@@ -411,3 +411,4 @@ C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\ne
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-ios\iossimulator-x64\Info.plist
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-ios\iossimulator-x64\CodeResources
 C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-ios\iossimulator-x64\libSkiaSharp
+C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-ios\iossimulator-x64\UBBnewsApp.sourcelink.json
