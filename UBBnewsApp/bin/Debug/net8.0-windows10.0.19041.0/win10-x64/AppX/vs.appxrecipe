@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-16T15:58:40.076</Modified>
+      <Modified>2024-08-17T13:38:20.310</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-08-12T17:00:58.651</Modified>
+      <Modified>2024-08-16T17:24:05.561</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\UBBnewsApp.runtimeconfig.json">
       <PackagePath>UBBnewsApp.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\UBBnewsApp.dll">
       <PackagePath>UBBnewsApp.dll</PackagePath>
-      <Modified>2024-08-16T15:58:39.106</Modified>
+      <Modified>2024-08-17T13:38:19.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>UBBnewsApp.exe</PackagePath>
-      <Modified>2024-08-16T15:58:39.149</Modified>
+      <Modified>2024-08-17T13:38:19.938</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -691,7 +691,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\UBBnewsApp.deps.json">
       <PackagePath>UBBnewsApp.deps.json</PackagePath>
-      <Modified>2024-08-12T17:00:58.783</Modified>
+      <Modified>2024-08-16T17:24:05.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\.nuget\packages\humanizer.core\2.14.1\lib\net6.0\Humanizer.dll">
       <PackagePath>Humanizer.dll</PackagePath>

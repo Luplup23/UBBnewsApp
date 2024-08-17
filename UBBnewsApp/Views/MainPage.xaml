@@ -1,7 +1,7 @@
 ﻿<ContentPage
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="UBBnewsApp.MainPage"
+    x:Class="UBBnewsApp.MainPage" BackgroundColor="#3a3e5c"
 >
     <ContentPage.Content>
         <ScrollView>
@@ -12,51 +12,76 @@
                     SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
                 />
                 <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="CenterAndExpand"
-                    Padding="10"
+                    Style="{StaticResource NavButtons}"
                 >
+                    <BoxView               
+                             Style="{StaticResource NavigationEnds}"
+                             CornerRadius="10,0,10,0"/>
                     <Button
                         Text="Ogólne"
                         Command="{Binding FilterPostsCommand}"
+                        Style="{StaticResource NavigationButton}"
                         CommandParameter="Ogólne"
+                        
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
                         Text="AZS"
                         Command="{Binding FilterPostsCommand}"
+                        Style="{StaticResource NavigationButton}"
                         CommandParameter="AZS"
+                        
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
                         Text="WBMII"
                         Command="{Binding FilterPostsCommand}"
+                        Style="{StaticResource NavigationButton}"
                         CommandParameter="WBMiI"
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
                         Text="WH-S"
                         Command="{Binding FilterPostsCommand}"
+                        Style="{StaticResource NavigationButton}"
                         CommandParameter="WH-S"
+                        CornerRadius="0"
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
                         Text="WNoZ"
                         Command="{Binding FilterPostsCommand}"
                         CommandParameter="WNoZ"
+                        Style="{StaticResource NavigationButton}"
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
                         Text="chór"
+                        Style="{StaticResource NavigationButton}"
                         Command="{Binding FilterPostsCommand}"
                         CommandParameter="chór"
                     />
+                    <BoxView Style="{StaticResource Seperator}"/>
                     <Button
-                        Text="Clear"
-                        Command="{Binding FilterPostsCommand}"
-                        CommandParameter="Clear"
+                    Text="Clear"
+                    Style="{StaticResource NavigationButton}"
+                    Command="{Binding FilterPostsCommand}"
+                    CommandParameter="Clear"
                     />
+                    <BoxView 
+                        Style="{StaticResource NavigationEnds}"
+                             CornerRadius="0,10,0,10"/>
+                </StackLayout>
+                <StackLayout                     Style="{StaticResource NavButtons}"
+>
+                    <Button
+                          Text="Reload" Command="{Binding RefreshCommand}"/>
                 </StackLayout>
                 <ActivityIndicator
                     IsRunning="{Binding IsLoading}"
                     IsVisible="{Binding IsLoading}"
                 />
-                <CollectionView ItemsSource="{Binding Posts}">
+                    <CollectionView ItemsSource="{Binding Posts}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout
@@ -110,6 +135,7 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+
                 <StackLayout
                 Style="{StaticResource PaginationStackLayout}"
                     >

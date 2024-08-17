@@ -15,6 +15,10 @@ namespace UBBnewsApp.ViewModels
         private
         const int PostsPerPage = 10;
         private int _currentPage;
+        public ICommand RefreshCommand 
+        { 
+            get; 
+        }
 
         public ICommand SearchCommand
         {
@@ -36,6 +40,7 @@ namespace UBBnewsApp.ViewModels
         {
             get;
         }
+
 
         private bool _isPreviousPageVisible;
         public bool IsPreviousPageVisible
@@ -79,6 +84,7 @@ namespace UBBnewsApp.ViewModels
             }
         }
 
+
         public ObservableCollection<Post> Posts
         {
             get;
@@ -98,12 +104,20 @@ namespace UBBnewsApp.ViewModels
             SearchCommand = new Command<string>(async (search) => await SearchPostsAsync(search));
             NextPageCommand = new Command(NextPage);
             PreviousPageCommand = new Command(PreviousPage);
+            RefreshCommand = new Command(async () => await RefreshAsync());
 
             _allPosts = [];
             _currentPage = 0;
             _ = LoadPostsAsync();
         }
 
+        private async Task RefreshAsync()
+        {
+            Posts.Clear();
+            IsNextPageVisible = false;
+            _currentPage = 0;
+            await LoadPostsAsync();
+        }
         private void UpdatePosts(IEnumerable<Post> postsToShow)
         {
             Posts.Clear();
@@ -134,7 +148,7 @@ namespace UBBnewsApp.ViewModels
                 UpdatePosts(_filteredPosts);
             }
         }
-
+     
         private async Task LoadPostsAsync()
         {
             IsLoading = true;
