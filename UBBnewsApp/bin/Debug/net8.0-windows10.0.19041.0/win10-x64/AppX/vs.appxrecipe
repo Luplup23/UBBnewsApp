@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-17T13:38:20.310</Modified>
+      <Modified>2024-09-04T11:56:12.081</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\UBBnewsApp.dll">
       <PackagePath>UBBnewsApp.dll</PackagePath>
-      <Modified>2024-08-17T13:38:19.934</Modified>
+      <Modified>2024-08-17T15:18:38.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>UBBnewsApp.exe</PackagePath>
-      <Modified>2024-08-17T13:38:19.938</Modified>
+      <Modified>2024-08-17T15:18:38.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\UBBnewsApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
