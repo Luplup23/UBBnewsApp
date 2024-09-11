@@ -1,0 +1,59 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UBBnewsApp
+build_property.ProjectDir = C:\Users\lilit\OneDrive\Documents\programming\UBBnewsApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\App.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\App.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\AppShell.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/Platforms/Windows/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.obj.Debug.net8._0_windows10._0._19041._0.win10_x64.Platforms.Windows.App.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/Platforms/Windows/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.Platforms.Windows.App.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\Platforms\Windows\App.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\Platforms\Windows\App.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\Resources\Styles\Colors.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\Resources\Styles\Styles.xaml
+
+[C:/Users/lilit/OneDrive/Documents/programming/UBBnewsApp/UBBnewsApp/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UBBnewsApp.UBBnewsApp.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UBBnewsApp\Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UBBnewsApp\Views\MainPage.xaml

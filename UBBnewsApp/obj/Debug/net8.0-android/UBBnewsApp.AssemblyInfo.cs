@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UBBnewsApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4d88d8f8c21f475cd41a0315f3a4c1e398cc7125")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("UBBnewsApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UBBnewsApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
